@@ -5,5 +5,11 @@
 #-------------------#
 
 A non-graphical operating system (sorry).
-## Flashing
-You can just compress the repo folder using a software like Keka.
+
+Configuration
+=============
+Run `./configure` to configure everything. Follow the instructions.
+
+Flashing
+========
+Get a software like unetbootin to flash the iso to your USB.
