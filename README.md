@@ -1,10 +1,4 @@
-```
-#-------------------#
-#                   #
-#      AarikOS      #
-#                   #
-#-------------------#
-```
+# AarikOS
 A non-graphical operating system (sorry).
 
 Configuration
