@@ -13,4 +13,4 @@ genisoimage -o aarikos.iso -R -J aarikos
 
 Flashing
 ========
-Get a software like unetbootin to flash the iso to your USB.
+Get a software like [unetbootin](https://unetbootin.github.io/) to flash the iso to your USB.
