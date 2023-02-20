@@ -1,0 +1,42 @@
+#-------------------------#
+#                         #
+#         AarikOS         #
+#                         #
+#-------------------------#
+# Copyright (c) 2023, Aarik Pokras. All Rights Reserved.
+# Licensed under the MIT License.
+
+insmod read
+
+echo -e "Welcome to AarikOS!\n\n"
+while [ 0 ]; do
+  echo -n ">> "
+  read pro
+  if [ -z "$pro" ]; then
+    echo ""
+  elif [ "$pro" = "help" ]; then
+    echo -e "\nAarikOS Commands List:\n"
+    echo "halt               Halt the system."
+    echo "reboot             Reboot the system."
+    echo "clear              Clear the screen."
+    echo "help               Display this help message."
+    echo "br                 Instructions on reporting a bug."
+    echo ""
+  elif [ "$pro" = "clear" ]; then
+    clear
+  elif [ "$pro" = "halt" ]; then
+    halt
+  elif [ "$pro" = "reboot" ]; then
+    reboot
+  elif [ "$pro" = "ls" ]; then
+    echo -e "\nDIR: "
+    read direc
+    echo ""
+    ls ${direc}
+  elif [ "$pro" = "br" ]; then
+    echo -e "To report a bug, you can go to the GitHub issues page or contact aarik@searchme.one."
+  else
+    echo -e "\nAShell: ${pro}: command not found."
+  fi
+done
+
