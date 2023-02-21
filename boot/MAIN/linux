@@ -36,7 +36,7 @@ while [ 0 ]; do
   elif [ "$pro" = "br" ]; then
     echo -e "To report a bug, you can go to the GitHub issues page or contact aarik@searchme.one."
   else
-    echo -e "\nAShell: $pro: command not found."
+    echo -e "\nAShell: $1: command not found."
   fi
 done
 
