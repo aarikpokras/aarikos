@@ -1,11 +1,14 @@
 # AarikOS
 A non-graphical operating system (sorry).
 
+Requirements
+============
+* xorriso
+* Makefile/build-essential
+
 Configuration
 =============
 Run `./configure` to configure everything. Follow the instructions.
-
-You're gonna need `xorriso`. You can get it with your distro's package manager.
 
 Flashing
 ========
