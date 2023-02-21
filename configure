@@ -4,5 +4,5 @@ printf "Checking for Makefile..."
 if [ $(hash make >& /dev/null;printf "$?") -eq 0 ]; then printf "yes\n"; else printf "no\n"; fi
 printf "\e[1;31mIf any of those turned out as 'no', then please install them.\e[0m\n"
 printf "Creating makefile...\n"
-printf 'ALL: del\ndel:\n	rm README.md\n	rm configure' >> Makefile
+printf 'ALL: del\ndel:\n	rm README.md\n	rm configure\n	./makeiso' >> Makefile
 printf "Please run \`make\` to finish.\n"
