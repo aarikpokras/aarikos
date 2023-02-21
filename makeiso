@@ -1,3 +1,6 @@
+if [ "$0" = "makeiso" ]; then printf "\e[1;31mPlease don't run this program by itself. First run \`./configure\`."
+else
 read -p "$(printf '\e[1;37m')Please enter the path to the aarikos folder. $(printf '\e[0;36m')" origfol
 read -p "$(printf '\e[1;37m')Please enter the desired path to the iso file. $(printf '\e[0;36m')" isofile
 xorriso -as mkisofs -o $isofile $origfol
+fi
