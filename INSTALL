@@ -7,6 +7,17 @@
 
 Welcome to AarikOS! This is a detailed guide on how to compile and prepare it for flashing.
 
+#==============#
+#   Warnings   #
+#==============#
+
+AarikOS won't boot up in VirtualBox. You need a physical machine.
+
+AarikOS is built for UEFI/EFI boot architecture. BIOS won't work. In other words, these machines are supported:
+* Any machine that came with Windows (must be made after 2010)
+* Apple machines
+* Any machine that you could run Linux on
+
 #==================#
 #   Requirements   #
 #==================#
