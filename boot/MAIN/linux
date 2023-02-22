@@ -30,28 +30,6 @@ while [ 0 ]; do
     halt
   elif [ "$pro" = "halt --reboot" ]; then
     reboot
-  elif [ "$pro" = "put" ]; then
-    echo -n "File or Directory (f/d) "
-    read ford
-    if [ "$ford" = "d" ]; then
-      echo -n "Directory path: "
-      read folna
-      mkdir ${folna}
-    elif [ "$ford" = "f" ]; then
-      echo -n "File path: "
-      read fpath
-      echo -e "\nType EOF once you're done."
-      while [ 0 ]; do
-        echo -n ">>> "
-        read appendfile
-        echo ${appendfile} >> ${fpath}
-        if [ "$appendfile" = "EOF" ]; then
-          break
-        else
-          echo -n ""
-        fi
-      done
-    fi
   elif [ "$pro" = "ls" ]; then
     echo -e "\nDIR: "
     read direc
