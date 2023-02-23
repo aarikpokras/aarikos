@@ -23,6 +23,7 @@ while [ 0 ]; do
     echo "help               Display this help message."
     echo "br                 Instructions on reporting a bug."
     echo "ls                 View contents of a directory."
+    echo "vfile              View the contents of a file"
     echo ""
   elif [ "$pro" = "clear" ]; then
     clear
@@ -46,8 +47,13 @@ while [ 0 ]; do
     ls ${direc}
   elif [ "$pro" = "br" ]; then
     echo -e "\nTo report a bug, you can go to the GitHub issues page or contact aarik@searchme.one."
+  elif [ "$pro" = "vfile" ]; then
+    echo ""
+    echo -n "Filename: "
+    read fname
+    cat ${fname}
   else
-    echo -e "\nAShell: ${pro}: command not found."
+    echo -e "\nAShell: ${pro}: command not recognized."
   fi
 done
 
