@@ -35,6 +35,7 @@ while [ 0 ]; do
     read ryorn
     if [ "$ryorn" = "y" ]; then reboot; else echo ""; fi
   elif [ "$pro" = "grapt" ]; then
+    set gfxmode=800x600
     background_image /boot/grub/image.png
   elif [ "$pro" = "ls" ]; then
     echo -e "\nDIR: "
