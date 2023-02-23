@@ -18,7 +18,7 @@ while [ 0 ]; do
   elif [ "$pro" = "help" ]; then
     echo -e "\nAarikOS Commands List:\n"
     echo "halt               Halt the system."
-    echo "    /reboot       Reboot the system."
+    echo "    /reboot        Reboot the system."
     echo "clear              Clear the screen."
     echo "help               Display this help message."
     echo "br                 Instructions on reporting a bug."
@@ -27,10 +27,12 @@ while [ 0 ]; do
   elif [ "$pro" = "clear" ]; then
     clear
   elif [ "$pro" = "halt" ]; then
+    echo ""
     echo -n "Do you really want to halt? y/n "
     read hyorn
     if [ "$hyorn" = "y" ]; then halt; else echo ""; fi
   elif [ "$pro" = "halt /reboot" ]; then
+    echo ""
     echo -n "Do you really want to reboot? y/n "
     read ryorn
     if [ "$ryorn" = "y" ]; then reboot; else echo ""; fi
