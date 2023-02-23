@@ -45,7 +45,7 @@ while [ 0 ]; do
     echo ""
     ls ${direc}
   elif [ "$pro" = "br" ]; then
-    echo -e "To report a bug, you can go to the GitHub issues page or contact aarik@searchme.one."
+    echo -e "\nTo report a bug, you can go to the GitHub issues page or contact aarik@searchme.one."
   else
     echo -e "\nAShell: ${pro}: command not found."
   fi
