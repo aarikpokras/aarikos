@@ -18,18 +18,24 @@ while [ 0 ]; do
   elif [ "$pro" = "help" ]; then
     echo -e "\nAarikOS Commands List:\n"
     echo "halt               Halt the system."
-    echo "    --reboot       Reboot the system."
+    echo "    /reboot       Reboot the system."
     echo "clear              Clear the screen."
     echo "help               Display this help message."
     echo "br                 Instructions on reporting a bug."
-    echo "put                Basic file editor."
+    echo "ls                 View contents of a directory."
     echo ""
   elif [ "$pro" = "clear" ]; then
     clear
   elif [ "$pro" = "halt" ]; then
-    halt
-  elif [ "$pro" = "halt --reboot" ]; then
-    reboot
+    echo -n "Do you really want to halt? y/n "
+    read hyorn
+    if [ "$hyorn" = "y" ]; then halt; else echo ""; fi
+  elif [ "$pro" = "halt /reboot" ]; then
+    echo -n "Do you really want to reboot? y/n "
+    read ryorn
+    if [ "$ryorn" = "y" ]; then reboot; else echo ""; fi
+  elif [ "$pro" = "grapt" ]; then
+    background_image /boot/grub/image.png
   elif [ "$pro" = "ls" ]; then
     echo -e "\nDIR: "
     read direc
