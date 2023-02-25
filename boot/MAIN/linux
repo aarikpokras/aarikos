@@ -33,6 +33,9 @@ while [ 0 ]; do
     read fnvf
     echo -n "Path to save to (Inside directory /boot/fls): "
     read ptvf
+    echo -n "File content: "
+    read fcon
+    set fnvf=${fcon}
     save_env ${fnvf} /boot/fls/${ptvf}
     clear
   elif [ "$pro" = "halt" ]; then
