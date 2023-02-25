@@ -1,0 +1,9 @@
+menuentry "<- Back" {
+        configfile /boot/grub/grub.cfg
+}
+menuentry "Shut down" {
+        halt
+}
+menuentry "Reboot" {
+        reboot
+}
