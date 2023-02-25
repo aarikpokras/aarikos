@@ -7,6 +7,9 @@
 #
 # Licensed under the MIT License.
 
+# Set the terminal color.
+set color_normal=green/black
+
 insmod read
 
 echo -e "Welcome to AarikOS!\n\n"
@@ -16,7 +19,9 @@ while [ 0 ]; do
   if [ -z "$pro" ]; then
     echo ""
   elif [ "$pro" = "help" ]; then
+# Help list
     echo -e "\nAarikOS Commands List:\n"
+#        | Command |         What it does |
     echo "halt               Halt the system."
     echo "     /reboot       Reboot the system."
     echo "clear              Clear the screen."
@@ -25,9 +30,18 @@ while [ 0 ]; do
     echo "ls                 View contents of a directory."
     echo "vfile              View the contents of a file"
     echo "      /edit        Simple file editor (beta)"
+    echo "custcol            Customize the colors of the terminal."
     echo ""
   elif [ "$pro" = "clear" ]; then
     clear
+  elif [ "$pro" = "custcol" ]; then
+    echo "Choices:"
+    echo -e "\nblack\nblue\ngreen\ncyan\nred\nmagenta\nbrown\nlight-gray\ndark-gray\nlight-blue\nlight-green\nlight-cyan\nlight-red\nlight-magenta\nyellow\nwhite"
+    echo -n "Foreground: "
+    read fg
+    echo -n "Background: "
+    read bg
+    set color_normal=${fg}/${bg}
   elif [ "$pro" = "vfile /edit" ]; then
     echo -n "Filename (excluding path): "
     read fnvf
