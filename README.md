@@ -10,6 +10,12 @@ Configuration
 -------------
 Run `./configure` to configure everything. Follow the instructions.
 
+### or
+
+You can get the latest artifact on the [actions page](https://github.com/aarikpokras/aarikos/actions).
+
+[Instructions](https://github.com/aarikpokras/aarikos/blob/main/ins.md)
+
 Flashing
 --------
 Get a software like [unetbootin](https://unetbootin.github.io/) to flash the iso to your USB.
