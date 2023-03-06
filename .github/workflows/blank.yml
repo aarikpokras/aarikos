@@ -13,4 +13,5 @@ jobs:
       - uses: actions/checkout@v3
       - name: makeiso
         run: |
-          sudo apt install xorriso
+          ./configure
+          make
