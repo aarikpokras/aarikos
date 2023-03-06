@@ -13,4 +13,4 @@ jobs:
       - uses: actions/checkout@v3
       - name: makeiso
         run: |
-          xorriso -as mkisofs -o aarikos.iso aarikos
+          xorriso -as mkisofs -o aarikos.iso ../aarikos
