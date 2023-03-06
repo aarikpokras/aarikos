@@ -16,5 +16,5 @@ jobs:
           xorriso -as mkisofs -o aarikos.iso ../aarikos
       - uses: actions/upload-artifact@v2
         with:
-          name: isofile
+          name: aarikos-ci-build.iso
           path: aarikos.iso
