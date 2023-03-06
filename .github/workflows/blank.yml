@@ -14,3 +14,7 @@ jobs:
       - name: makeiso
         run: |
           xorriso -as mkisofs -o aarikos.iso ../aarikos
+      - uses: actions/upload-artifact@v2
+        with:
+          name: isofile
+          path: aarikos.iso
